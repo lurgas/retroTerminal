@@ -1,0 +1,25 @@
+{
+	"short_name": "Phosphor",
+	"name": "Phosphor Terminal Simulator",
+	"icons": [
+		{
+			"src": "computer.jpg",
+			"sizes": "64x64 32x32 24x24 16x16",
+			"type": "image/jpg"
+		},
+		{
+			"src": "computer.jpg",
+			"type": "image/jpg",
+			"sizes": "192x192"
+		},
+		{
+			"src": "computer.jpg",
+			"type": "image/png",
+			"sizes": "400x400"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
+}

@@ -1,0 +1,636 @@
+{
+	"config": {
+		"name": "The Haunting of Ypsilon-14 JSON data",
+		"author": "@redhg",
+		"comment": "Phosphor content file for the 'Haunting of Ypsilon-14' module for the Mothership tabletop roleplaying game. Visit https://redhg.com/ypsilon14/ to see the compiled application."
+	},
+	"screens": [
+		{
+			"id": "screen0",
+			"type": "screen",
+			"content": [
+				"Menu",
+				"=========",
+				"",
+				{
+					"text": "> MAPA DA ESTAÇÃO",
+					"type": "link",
+					"target": "map"
+				},
+				{
+					"text": "> DIAGNÓSTICOS",
+					"type": "link",
+					"target": "diagnostics"
+				},
+				{
+					"text": "> CRONOGRAMA",
+					"type": "link",
+					"target": "schedule"
+				},
+				{
+					"text": "> TRIPULANTES",
+					"type": "link",
+					"target": "roster"
+				},
+				{
+					"text": "> COMUNICAÇÕES",
+					"type": "link",
+					"target": "comms"
+				},
+				{
+					"text": "> CONTROLES",
+					"type": "link",
+					"target": "controls"
+				}
+			]
+		},
+		{
+			"id": "map",
+			"type": "screen",
+			"content": [
+				"Mapa da Estação",
+				"===========",
+				"",
+				{
+					"type": "bitmap",
+					"src": "https://i.imgur.com/wmKIkvy.png",
+					"className": "lighten"
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "screen0",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "diagnostics",
+			"type": "screen",
+			"content": [
+				"Diagnósticos",
+				"===========",
+				"",
+				"Checando suporte de vida.............. Sucesso.",
+				"Checando sistemas principais.............. Sucesso.",
+				"",
+				{
+					"text": "ALERTA: Fluxo de ar em 82.4% da capacidade total. Verifique a ventilação dos quartos da tripulação quanto a bloqueios.",
+					"className": "alert",
+					"type": "text"
+				},
+				{
+					"text": "ALERTA: Chuveiro #5 não-funcional há 1 dia(s).",
+					"className": "alert",
+					"type": "text"
+				},
+				"",
+				"NOTA: Filtros de ar substituídos há 455 dia(s).",
+				"NOTA: Elevação da mina mantida há 455 dia(s).",
+				"",
+				"===========",
+				"",
+				"RESUMO:",
+				"Todos os sistemas operando dentro dos parâmetros aceitáveis.",
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "screen0",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "schedule",
+			"type": "screen",
+			"content": [
+				"Cronograma",
+				"========",
+				"",
+				"Atividade(s) da(s) doca(s) (últimos 6 meses):",
+				"",
+				"2366-06-12.0633 - Doca 2 : Chegada :: Tempest",
+				"2366-04-29.0834 - Doca 1 : Chegada :: Heracles",
+				"2366-03-02.1223 - Doca 2 : Partida :: Orca Largo",
+				"2366-02-20.1604 - Doca 2 : Chegada :: Orca Largo",
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "screen0",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "roster",
+			"type": "screen",
+			"content": [
+				"Tripulação",
+				"======",
+				"",
+				"01. VERHOEVEN, Sonya     :: Operador(a) Chefe",
+				"02. SINGH, Ashraf        :: Quebrador(a)",
+				"03. DE BEERS, Dana       :: Furador(a) Chefe",
+				"04. CHATZKEL, Jerome     :: Assistente de Furão",
+				"05. TOBIN, Rosa          :: Engenheiro(a)",
+				"06. RADIMIR, Mikhail     :: Engenheiro(a) Chefe",
+				"07. KANTARO, Kenji       :: Carregador(a)",
+				"08. BOWE, Morgan         :: Carregador(a)",
+				"09. NEKTARIOS, Ri        :: Carregador(a)",
+				"10. n/a",
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "screen0",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "comms",
+			"type": "screen",
+			"content": [
+				"Comunicações",
+				"=====",
+				"",
+				"2 embarcações detectadas nas proximidades.",
+				"",
+				{
+					"text": "> SAUDAR TEMPEST",
+					"target": "hailtempest",
+					"type": "link"
+				},
+				{
+					"text": "> SAUDAR HERACLES",
+					"target": "hailHERACLES",
+					"type": "link"
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "screen0",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "hailtempest",
+			"type": "screen",
+			"content": [
+				"Transmitindo",
+				"============",
+				"",
+				"..........................................",
+				"..........................................",
+				"",
+				"CANAL DE COMUNICAÇÃO ABERTO",
+				"",
+				"======",
+				"",
+				{
+					"text": "< FECHAR CANAL",
+					"target": "comms",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "hailHERACLES",
+			"type": "screen",
+			"content": [
+				"Transmitindo",
+				"============",
+				"",
+				"..........................................",
+				"..........................................",
+				"..........................................",
+				"..........................................",
+				"",
+				{
+					"type": "text",
+					"className": "alert",
+					"text": "SEM RESPOSTA"
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "comms",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "controls",
+			"type": "screen",
+			"content": [
+				"Controle",
+				"========",
+				"",
+				"[A] :: Acesso restrito à administradores",
+				"",
+				{
+					"text": "> Chuveiros",
+					"target": "showers",
+					"type": "link"
+				},
+				{
+					"text": "> Laboratório de Hidroponia",
+					"target": "greenhouse",
+					"type": "link"
+				},
+				{
+					"text": "> Câmaras de Ar [A]",
+					"type": "link",
+					"target": [
+						{
+							"target": "lockedDialog",
+							"type": "dialog",
+							"shiftKey": false
+						},
+						{
+							"target": "airlocks",
+							"type": "link",
+							"shiftKey": true
+						}
+					]
+				},
+				{
+					"text": "> Sistema [A]",
+					"type": "link",
+					"target": [
+						{
+							"target": "lockedDialog",
+							"type": "dialog",
+							"shiftKey": false
+						},
+						{
+							"target": "system",
+							"type": "link",
+							"shiftKey": true
+						}
+					]
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "screen0",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "airlocks",
+			"type": "screen",
+			"content": [
+				"Câmaras de Ar",
+				"========",
+				"",
+				{
+					"type": "link",
+					"text": "> DOCA DE ACOPLAMENTO 1 :: TRANCADO — ERRO",
+					"className": "alert",
+					"target": [
+						{
+							"target": "airlockError",
+							"type": "dialog",
+							"shiftKey": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> DOCA DE ACOPLAMENTO 2 :: DESTRANCADO",
+							"active": true
+						},
+						{
+							"text": "> DOCA DE ACOPLAMENTO 2 :: TRANCADO",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> BOCA DA MINA :: TRANCADO",
+							"active": true
+						},
+						{
+							"text": "> BOCA DA MINA :: DESTRANCADO",
+							"active": false
+						}
+					]
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "controls",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "showers",
+			"type": "screen",
+			"content": [
+				"Chuveiros",
+				"=======",
+				"",
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> CHUVEIRO 1 :: DESLIGADO",
+							"active": true
+						},
+						{
+							"text": "> CHUVEIRO 1 :: LIGADO",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> CHUVEIRO 2 :: DESLIGADO",
+							"active": true
+						},
+						{
+							"text": "> CHUVEIRO 2 :: LIGADO",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> CHUVEIRO 3 :: DESLIGADO",
+							"active": true
+						},
+						{
+							"text": "> CHUVEIRO 3 :: LIGADO",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> CHUVEIRO 4 :: DESLIGADO",
+							"active": true
+						},
+						{
+							"text": "> CHUVEIRO 4 :: LIGADO",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "text",
+					"className": "alert",
+					"text": "> CHUVEIRO 5 :: FALHA DE FUNCIONAMENTO"
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> CHUVEIRO 6 :: DESLIGADO",
+							"active": true
+						},
+						{
+							"text": "> CHUVEIRO 6 :: LIGADO",
+							"active": false
+						}
+					]
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "controls",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "greenhouse",
+			"type": "screen",
+			"content": [
+				"Laboratório de Hidroponia",
+				"===============",
+				"",
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> SISTEMA DE HIDRATAÇÃO À NÉVOA :: DESLIGADO",
+							"active": true
+						},
+						{
+							"text": "> SISTEMA DE HIDRATAÇÃO À NÉVOA :: LIGADO",
+							"active": false
+						}
+					]
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "controls",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "system",
+			"type": "screen",
+			"content": [
+				"System",
+				"======",
+				"",
+				{
+					"text": "> SUPORTE DE VIDA",
+					"target": "lifesupport",
+					"type": "link"
+				},
+				{
+					"text": "> AUTODESTRUIÇÃO",
+					"target": "selfdestruct",
+					"type": "link"
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "controls",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "lifesupport",
+			"type": "screen",
+			"content": [
+				"Life Support",
+				"============",
+				"",
+				{
+					"type": "text",
+					"className": "alert",
+					"text": "AVISO: Desativar o suporte de vida é uma violação da política da empresa nº 2778-A. A CENTAURI CORPS. não assume responsabilidades ou obrigações resultantes do uso indevido deste recurso."
+				},
+				"",
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> SUPORTE DE VIDA :: ATIVADO",
+							"active": true
+						},
+						{
+							"text": "> SUPORTE DE VIDA :: DESATIVADO",
+							"active": false
+						}
+					]
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "system",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "selfdestruct",
+			"type": "screen",
+			"content": [
+				"Self-Destruct",
+				"=============",
+				"",
+				"CONTRATO: A CENTAURI CORPS. por meio deste fornece autoridade para o Operador Chefe da Instalação (OCI) [SONYA] para ativar o sistema de autodestruição, resultando em afundamento, de Ypsilon 10 (a instalação) nas seguintes instâncias:",
+				"",
+				"- Ameaça imediata e real da instalação, ou seu conteúdo, ser tomada sem aprovação por forças externas à corporação.",
+				"- Ameaça imediata e real da instalação, ou seu conteúdo, ser tomada por forças internas da corporação, onde essas forças pretendem violar o propósito da instalação conforme descrito no \"Manual de Operações - Y100\".",
+				"",
+				{
+					"type": "text",
+					"className": "alert",
+					"text": "Se for determinado que o sistema de autodestruição foi ativado por razões diferentes das instâncias aprovadas, o custo das perdas, incluindo o valor da instalação e perda de lucro potencial, conforme determinado pelo volume de negócios da instalação com base nas demonstrações financeiras de maior benefício para a CENTAURI CORPS., e quaisquer outros custos pelos quais a corporação possa ser responsável, devem ser cobrados do OCI [SONYA] como uma dívida de serviço contratado. Quando esta dívida não puder ser paga pela liquidação completa dos ativos do OCI [SONYA] e conclusão do serviço contratado do OCI [SONYA] sozinho, qualquer parente de 4 graus de relação será contratado pela Corporação para cobrar o pagamento da dívida."
+				},
+				"",
+				{
+					"text": "> Ativar Autodestruição",
+					"target": "activateeslfdestruct",
+					"type": "link"
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "system",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "activateeslfdestruct",
+			"type": "screen",
+			"content": [
+				"Ativar Autodestruição",
+				"======================",
+				"",
+				{
+					"type": "text",
+					"className": "alert",
+					"text": "ESSA AÇÃO CAUSARÁ A AUTO DESTRUIÇÃO DA ESTAÇÃO EM 10 MINUTOS."
+				},
+				"",
+				{
+					"type": "text",
+					"className": "alert",
+					"text": "ESSA AÇÃO É IRREVERSÍVEL."
+				},
+				"",
+				{
+					"type": "prompt",
+					"prompt": "DIGITE 'Y' PARA INICIAR CONTAGEM: ",
+					"className": "alert cursor",
+					"commands": [
+						{
+							"command": "y",
+							"action": {
+								"type": "link",
+								"target": "evacuate"
+							}
+						}
+					]
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "selfdestruct",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "evacuate",
+			"type": "screen",
+			"content": [
+				{
+					"type": "text",
+					"className": "alert",
+					"text": "SEQUÊNCIA DE AUTODESTRUIÇÃO INICIADA."
+				},
+				"",
+				{
+					"type": "text",
+					"className": "alert",
+					"text": "FAVOR EVACUAR O MAIS RÁPIDO POSSÍVEL."
+				}
+			]
+		}
+	],
+	"dialogs": [
+		{
+			"id": "lockedDialog",
+			"type": "alert",
+			"content": ["Erro! Autorização necessária."]
+		},
+		{
+			"id": "airlockError",
+			"type": "alert",
+			"content": ["Erro! Controle de tranca em vigor.", "", "Não é possível desbloquear remotamente. Intervenção manual necessária."]
+		}
+	]
+}

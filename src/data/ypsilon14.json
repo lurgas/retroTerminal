@@ -88,7 +88,6 @@
 				},
 				"",
 				"NOTA: Filtros de ar substituídos há 455 dia(s).",
-				"NOTA: Elevação da mina mantida há 455 dia(s).",
 				"",
 				"===========",
 				"",
@@ -113,9 +112,9 @@
 				"",
 				"Atividade(s) da(s) doca(s) (últimos 6 meses):",
 				"",
-				"2366-06-12.0633 - Doca 2 : Chegada :: Tempest",
-				"2366-04-29.0834 - Doca 1 : Chegada :: Heracles",
-				"2366-03-02.1223 - Doca 2 : Partida :: Orca Largo",
+				"2366-05-12.0633 - Doca 2 : Chegada :: Falcão do Milênio",
+				"2366-04-29.0834 - Doca 1 : Chegada :: Atlas",
+				"2366-02-21.1223 - Doca 2 : Partida :: Orca Largo",
 				"2366-02-20.1604 - Doca 2 : Chegada :: Orca Largo",
 				"",
 				"======",
@@ -164,13 +163,13 @@
 				"2 embarcações detectadas nas proximidades.",
 				"",
 				{
-					"text": "> SAUDAR TEMPEST",
-					"target": "hailtempest",
+					"text": "> SAUDAR FALCÃO DO MILÊNIO",
+					"target": "hailfalcon",
 					"type": "link"
 				},
 				{
-					"text": "> SAUDAR HERACLES",
-					"target": "hailHERACLES",
+					"text": "> SAUDAR ATLAS",
+					"target": "hailatlas",
 					"type": "link"
 				},
 				"",
@@ -184,7 +183,7 @@
 			]
 		},
 		{
-			"id": "hailtempest",
+			"id": "hailfalcon",
 			"type": "screen",
 			"content": [
 				"Transmitindo",
@@ -205,7 +204,7 @@
 			]
 		},
 		{
-			"id": "hailHERACLES",
+			"id": "hailatlas",
 			"type": "screen",
 			"content": [
 				"Transmitindo",
@@ -251,6 +250,11 @@
 					"type": "link"
 				},
 				{
+					"text": "> Cozinha Automatizada",
+					"target": "kitchen",
+					"type": "link"
+				},
+				{
 					"text": "> Câmaras de Ar [A]",
 					"type": "link",
 					"target": [
@@ -267,7 +271,23 @@
 					]
 				},
 				{
-					"text": "> Sistema [A]",
+					"text": "> Portas de Hangar [A]",
+					"type": "link",
+					"target": [
+						{
+							"target": "lockedDialog",
+							"type": "dialog",
+							"shiftKey": false
+						},
+						{
+							"target": "airlocks",
+							"type": "link",
+							"shiftKey": true
+						}
+					]
+				},
+				{
+					"text": "> Sistemas Principais [A]",
 					"type": "link",
 					"target": [
 						{
@@ -328,11 +348,80 @@
 					"type": "toggle",
 					"states": [
 						{
-							"text": "> BOCA DA MINA :: TRANCADO",
+							"text": "> NÍVEL 1 :: TRANCADO",
 							"active": true
 						},
 						{
-							"text": "> BOCA DA MINA :: DESTRANCADO",
+							"text": "> NÍVEL 1 :: DESTRANCADO",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> NÍVEL 0 :: TRANCADO",
+							"active": true
+						},
+						{
+							"text": "> NÍVEL 0 :: DESTRANCADO",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> EXTERIOR :: TRANCADO",
+							"active": true
+						},
+						{
+							"text": "> EXTERIOR :: DESTRANCADO",
+							"active": false
+						}
+					]
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "controls",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "doors",
+			"type": "screen",
+			"content": [
+				"Portas de Hangar",
+				"========",
+				"",
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> DOCA DE ACOPLAMENTO 2 :: TRANCADO",
+							"active": true
+						},
+						{
+							"text": "> DOCA DE ACOPLAMENTO 2 :: DESTRANCADO",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> DOCA DE ACOPLAMENTO 2 :: TRANCADO",
+							"active": true
+						},
+						{
+							"text": "> DOCA DE ACOPLAMENTO 2 :: DESTRANCADO",
 							"active": false
 						}
 					]
@@ -465,15 +554,55 @@
 			]
 		},
 		{
+			"id": "kitchen",
+			"type": "screen",
+			"content": [
+				"Cozinha Automatizada",
+				"===============",
+				"",
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> LAVAR LOUÇA :: DESLIGADO",
+							"active": true
+						},
+						{
+							"text": "> LAVAR LOUÇA :: LIGADO",
+							"active": false
+						}
+					]
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "controls",
+					"type": "link"
+				}
+			]
+		},
+		{
 			"id": "system",
 			"type": "screen",
 			"content": [
-				"System",
+				"Sistemas Principais",
 				"======",
 				"",
 				{
 					"text": "> SUPORTE DE VIDA",
 					"target": "lifesupport",
+					"type": "link"
+				},
+				{
+					"text": "> GRAVIDADE ARTIFICIAL",
+					"target": "artificialgravity",
+					"type": "link"
+				},
+				{
+					"text": "> TEMPERATURA",
+					"target": "temperature",
 					"type": "link"
 				},
 				{
@@ -581,11 +710,11 @@
 				"",
 				{
 					"type": "prompt",
-					"prompt": "DIGITE 'Y' PARA INICIAR CONTAGEM: ",
+					"prompt": "DIGITE '0' PARA INICIAR CONTAGEM: ",
 					"className": "alert cursor",
 					"commands": [
 						{
-							"command": "y",
+							"command": "0",
 							"action": {
 								"type": "link",
 								"target": "evacuate"

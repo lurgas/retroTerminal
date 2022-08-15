@@ -9,7 +9,7 @@
 			"id": "screen0",
 			"type": "screen",
 			"content": [
-				"Menu",
+				"Menu Principal",
 				"=========",
 				"",
 				{
@@ -112,10 +112,10 @@
 				"",
 				"Atividade(s) da(s) doca(s) (últimos 6 meses):",
 				"",
-				"2366-05-12.0633 - Doca 2 : Chegada :: Falcão do Milênio",
-				"2366-04-29.0834 - Doca 1 : Chegada :: Atlas",
-				"2366-02-21.1223 - Doca 2 : Partida :: Orca Largo",
-				"2366-02-20.1604 - Doca 2 : Chegada :: Orca Largo",
+				"12366-05-12.0633 - Doca 2 : Chegada :: Falcão do Milênio",
+				"12366-04-29.0834 - Doca 1 : Chegada :: Atlas",
+				"12366-02-21.1223 - Doca 2 : Partida :: Orca Largo",
+				"12366-02-20.1604 - Doca 2 : Chegada :: Orca Largo",
 				"",
 				"======",
 				"",
@@ -135,13 +135,13 @@
 				"",
 				"01. VERHOEVEN, Sonya     :: Operador(a) Chefe",
 				"02. SINGH, Ashraf        :: Quebrador(a)",
-				"03. DE BEERS, Dana       :: Furador(a) Chefe",
-				"04. CHATZKEL, Jerome     :: Assistente de Furão",
-				"05. TOBIN, Rosa          :: Engenheiro(a)",
-				"06. RADIMIR, Mikhail     :: Engenheiro(a) Chefe",
-				"07. KANTARO, Kenji       :: Carregador(a)",
-				"08. BOWE, Morgan         :: Carregador(a)",
-				"09. NEKTARIOS, Ri        :: Carregador(a)",
+				"03. DE BEERS, Lahgaza    :: Furador(a) Chefe",
+				"04. CHATZKEL, Jerome     :: Assistente de Furador",
+				"05. RADIMIR, Mikhail     :: Engenheiro(a) Chefe",
+				"06. BOWE, Morgan         :: Carregador(a)",
+				"07. KANTARO, Kenji       :: Carregador(a) Chefe",
+				"08. TOBIN, Rosa          :: Carregador(a)",
+				"09. NEKTARIOS, Rie       :: Carregador(a)",
 				"10. n/a",
 				"",
 				"======",
@@ -234,7 +234,7 @@
 			"id": "controls",
 			"type": "screen",
 			"content": [
-				"Controle",
+				"Controles",
 				"========",
 				"",
 				"[A] :: Acesso restrito à administradores",
@@ -308,6 +308,144 @@
 				{
 					"text": "< VOLTAR",
 					"target": "screen0",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "showers",
+			"type": "screen",
+			"content": [
+				"Descontaminação",
+				"=======",
+				"",
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> CHUVEIRO 1 :: DESLIGADO",
+							"active": true
+						},
+						{
+							"text": "> CHUVEIRO 1 :: LIGADO",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> CHUVEIRO 2 :: DESLIGADO",
+							"active": true
+						},
+						{
+							"text": "> CHUVEIRO 2 :: LIGADO",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> CHUVEIRO 3 :: DESLIGADO",
+							"active": true
+						},
+						{
+							"text": "> CHUVEIRO 3 :: LIGADO",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> CHUVEIRO 4 :: DESLIGADO",
+							"active": true
+						},
+						{
+							"text": "> CHUVEIRO 4 :: LIGADO",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> CHUVEIRO 5 :: DESLIGADO",
+							"active": true
+						},
+						{
+							"text": "> CHUVEIRO 5 :: LIGADO",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> CHUVEIRO 6 :: DESLIGADO",
+							"active": true
+						},
+						{
+							"text": "> CHUVEIRO 6 :: LIGADO",
+							"active": false
+						}
+					]
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "controls",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "kitchen",
+			"type": "screen",
+			"content": [
+				"Cozinha Automatizada",
+				"========",
+				"",
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> RAÇÃO :: LANÇAR",
+							"active": true
+						},
+						{
+							"text": "> RAÇÃO :: PARAR",
+							"active": false
+						}
+					]
+				},
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"text": "> LAVA-LOUÇA :: ATIVADO",
+							"active": true
+						},
+						{
+							"text": "> LAVA-LOUÇA :: DESATIVADO",
+							"active": false
+						}
+					]
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "controls",
 					"type": "link"
 				}
 			]
@@ -554,36 +692,6 @@
 			]
 		},
 		{
-			"id": "kitchen",
-			"type": "screen",
-			"content": [
-				"Cozinha Automatizada",
-				"===============",
-				"",
-				{
-					"type": "toggle",
-					"states": [
-						{
-							"text": "> LAVAR LOUÇA :: DESLIGADO",
-							"active": true
-						},
-						{
-							"text": "> LAVAR LOUÇA :: LIGADO",
-							"active": false
-						}
-					]
-				},
-				"",
-				"======",
-				"",
-				{
-					"text": "< VOLTAR",
-					"target": "controls",
-					"type": "link"
-				}
-			]
-		},
-		{
 			"id": "system",
 			"type": "screen",
 			"content": [
@@ -596,13 +704,13 @@
 					"type": "link"
 				},
 				{
-					"text": "> GRAVIDADE ARTIFICIAL",
-					"target": "artificialgravity",
+					"text": "> TERMOSTATO",
+					"target": "temperature",
 					"type": "link"
 				},
 				{
-					"text": "> TEMPERATURA",
-					"target": "temperature",
+					"text": "> GRAVIDADE ARTIFICIAL",
+					"target": "artificialgravity",
 					"type": "link"
 				},
 				{
@@ -621,10 +729,78 @@
 			]
 		},
 		{
-			"id": "lifesupport",
+			"id": "artificialgravity",
 			"type": "screen",
 			"content": [
 				"Life Support",
+				"============",
+				"",
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"active": true,
+							"text": "> GRAVIDADE :: DESLIGADO"
+						},
+						{
+							"active": false,
+							"text": "> GRAVIDADE :: LIGADO"
+						}
+					]
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "system",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "temperature",
+			"type": "screen",
+			"content": [
+				"Life Support",
+				"============",
+				"",
+				{
+					"type": "toggle",
+					"states": [
+						{
+							"active": true,
+							"text": "> TERMOSTATO :: MORNO (25 CELSIUS)"
+						},
+						{
+							"active": false,
+							"text": "> TERMOSTATO :: QUENTE (30 CELSIUS)"
+						},
+						{
+							"active": false,
+							"text": "> TERMOSTATO :: DESLIGADO"
+						},
+						{
+							"active": false,
+							"text": "> TERMOSTATO :: FRIO (0 CELSIUS)"
+						}
+					]
+				},
+				"",
+				"======",
+				"",
+				{
+					"text": "< VOLTAR",
+					"target": "system",
+					"type": "link"
+				}
+			]
+		},
+		{
+			"id": "lifesupport",
+			"type": "screen",
+			"content": [
+				"Suporte à Vida",
 				"============",
 				"",
 				{

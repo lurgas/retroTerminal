@@ -732,7 +732,7 @@
 			"id": "artificialgravity",
 			"type": "screen",
 			"content": [
-				"Life Support",
+				"Gravidade Artificial",
 				"============",
 				"",
 				{
@@ -740,11 +740,11 @@
 					"states": [
 						{
 							"active": true,
-							"text": "> GRAVIDADE :: DESLIGADO"
+							"text": "> GRAVIDADE :: LIGADO"
 						},
 						{
 							"active": false,
-							"text": "> GRAVIDADE :: LIGADO"
+							"text": "> GRAVIDADE :: DESLIGADO"
 						}
 					]
 				},

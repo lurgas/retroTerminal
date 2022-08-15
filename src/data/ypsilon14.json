@@ -245,6 +245,11 @@
 					"type": "link"
 				},
 				{
+					"text": "> Descontaminação",
+					"target": "descontamination",
+					"type": "link"
+				},
+				{
 					"text": "> Laboratório de Hidroponia",
 					"target": "greenhouse",
 					"type": "link"
@@ -280,7 +285,7 @@
 							"shiftKey": false
 						},
 						{
-							"target": "airlocks",
+							"target": "hangar",
 							"type": "link",
 							"shiftKey": true
 						}
@@ -313,7 +318,7 @@
 			]
 		},
 		{
-			"id": "showers",
+			"id": "descontamination",
 			"type": "screen",
 			"content": [
 				"Descontaminação",
@@ -367,32 +372,6 @@
 						},
 						{
 							"text": "> CHUVEIRO 4 :: LIGADO",
-							"active": false
-						}
-					]
-				},
-				{
-					"type": "toggle",
-					"states": [
-						{
-							"text": "> CHUVEIRO 5 :: DESLIGADO",
-							"active": true
-						},
-						{
-							"text": "> CHUVEIRO 5 :: LIGADO",
-							"active": false
-						}
-					]
-				},
-				{
-					"type": "toggle",
-					"states": [
-						{
-							"text": "> CHUVEIRO 6 :: DESLIGADO",
-							"active": true
-						},
-						{
-							"text": "> CHUVEIRO 6 :: LIGADO",
 							"active": false
 						}
 					]
@@ -532,7 +511,7 @@
 			]
 		},
 		{
-			"id": "doors",
+			"id": "hangar",
 			"type": "screen",
 			"content": [
 				"Portas de Hangar",
@@ -542,11 +521,11 @@
 					"type": "toggle",
 					"states": [
 						{
-							"text": "> DOCA DE ACOPLAMENTO 2 :: TRANCADO",
+							"text": "> DOCA DE ACOPLAMENTO 1 :: FECHADO",
 							"active": true
 						},
 						{
-							"text": "> DOCA DE ACOPLAMENTO 2 :: DESTRANCADO",
+							"text": "> DOCA DE ACOPLAMENTO 1 :: ABERTO",
 							"active": false
 						}
 					]
@@ -555,11 +534,11 @@
 					"type": "toggle",
 					"states": [
 						{
-							"text": "> DOCA DE ACOPLAMENTO 2 :: TRANCADO",
+							"text": "> DOCA DE ACOPLAMENTO 2 :: FECHADO",
 							"active": true
 						},
 						{
-							"text": "> DOCA DE ACOPLAMENTO 2 :: DESTRANCADO",
+							"text": "> DOCA DE ACOPLAMENTO 2 :: ABERTO",
 							"active": false
 						}
 					]
@@ -762,7 +741,7 @@
 			"id": "temperature",
 			"type": "screen",
 			"content": [
-				"Life Support",
+				"Tesmostato",
 				"============",
 				"",
 				{
